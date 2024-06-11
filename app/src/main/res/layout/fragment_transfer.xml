@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".homescreenfragments.TransferFragment"
+    android:id="@+id/transfer_fragment"
+    android:background="@color/black">
+
+    <include
+        app:layout_collapseMode="parallax"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        layout="@layout/transfer_music_service_selector" />
+
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="History"
+        android:id="@+id/history"
+        android:icon="@drawable/history_icon"
+        />
+    <item android:title="Transfer"
+        android:id="@+id/transfer"
+        android:icon="@drawable/transfer_playlists_icon"
+        />
+    <item android:title="Settings"
+        android:id="@+id/settings"
+        android:icon="@drawable/settings"
+        />
+</menu>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".homescreenfragments.history.innercard.InnerCardActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- LOADING BAR -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/innerCardLoading"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            android:id="@+id/innerCardLoadingProgressBar"
+            android:layout_marginTop="-30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/nav_btn_selected"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/roboto"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:text=" Loading..."
+            app:layout_constraintTop_toBottomOf="@+id/innerCardLoadingProgressBar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="30dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- LOADING BAR ENDS -->
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        >
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/innerCardDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            <!-- SET APP TITLE PROGRAMMATICALLY-->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/historyInnerCardCollapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/black"
+                app:expandedTitleMarginStart="64dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+              >
+
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    layout="@layout/history_inner_card_details_block_v2" />
+
+
+
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/HistoryInnerCardRecyclerViewLY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_marginTop="350dp"
+            android:id="@+id/historyInnerCardPlaylistItemsShimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            app:shimmer_repeat_mode="restart"
+            android:padding="10dp"
+            app:shimmer_shape="radial">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/history_innercard_playlist_items_shimmer_rv" />
+                <include layout="@layout/history_innercard_playlist_items_shimmer_rv" />
+                <include layout="@layout/history_innercard_playlist_items_shimmer_rv" />
+                <include layout="@layout/history_innercard_playlist_items_shimmer_rv" />
+                <include layout="@layout/history_innercard_playlist_items_shimmer_rv" />
+
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <include
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            layout="@layout/history_inner_card_share_info_dialog_box" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+</LinearLayout>

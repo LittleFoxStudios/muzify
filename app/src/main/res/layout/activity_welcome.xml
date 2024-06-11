@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".WelcomeActivity">
+
+<TextView
+    android:id="@+id/txt_block_1"
+    android:layout_width="200dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="20dp"
+    android:fontFamily="@font/roboto_thin"
+    android:textColor="@color/white"
+    android:textSize="40dp"
+    tools:text="SIGN IN"
+    />
+
+    <TextView
+        android:id="@+id/txt_block_2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/roboto_thin"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        tools:text="TO"
+        />
+
+    <TextView
+        android:id="@+id/txt_block_3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/audiowide"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        tools:text="START!"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        >
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/userSignInButton"
+            android:visibility="gone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+
+
+</android.widget.RelativeLayout>

@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="450dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <LinearLayout
+            android:id="@+id/InnerCardTopLayout"
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+            >
+
+            <LinearLayout
+                tools:background="@color/black"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:weightSum="15"
+                >
+
+                <!--Block 1 -->
+
+                <!-- Block 2 -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sourceText"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/audiowide"
+                            android:gravity="bottom"
+                            android:text="SOURCE"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/innerCardSourceImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            android:padding="20dp"
+                            tools:src="@drawable/youtube_music_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:background="@color/black"
+                        >
+                        <ImageView
+                            android:id="@+id/sourcePlaylistExternalLink"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/open_link"
+                            android:padding="25dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7"
+                    android:weightSum="10"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:weightSum="10"
+                        android:orientation="horizontal"
+                        >
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:scaleType="fitXY"
+                            tools:src="@drawable/music_icon_1"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.UpperLeftCorner"
+                            />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:scaleType="fitXY"
+                            tools:src="@drawable/music_icon_2"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.UpperRightCorner"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:weightSum="10"
+                        android:orientation="horizontal"
+                        >
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:scaleType="fitXY"
+                            tools:src="@drawable/music_icon_4"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.BottomLeftCorner"
+                            />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:scaleType="fitXY"
+                            tools:src="@drawable/music_icon_3"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.BottomRightCorner"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+                <!-- Block 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:weightSum="10"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/destinationText"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:fontFamily="@font/audiowide"
+                            android:gravity="bottom"
+                            android:text="DESTINATION"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/innerCardDestinationImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="4"
+                            tools:src="@drawable/spotify_icon"
+                            android:padding="20dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:background="@color/black"
+                        >
+                        <ImageView
+                            android:id="@+id/destinationPlaylistExternalLink"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/open_link"
+                            android:padding="25dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Title block -->
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                tools:background="@color/black"
+                android:weightSum="10"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    >
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    >
+
+                    <TextView
+                        android:id="@+id/innerCardPlaylistTitleStretched"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        tools:text="Yo This is my playlist!! check it out" />
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        >
+                </LinearLayout>
+                </LinearLayout>
+
+            <!-- Details block-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                tools:background="@color/black"
+                android:orientation="horizontal"
+                android:weightSum="15"
+                android:padding="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:weightSum="10"
+                    android:orientation="vertical"
+                    >
+                    <!-- START -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:weightSum="4"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            >
+                            <TextView
+                                android:id="@+id/InnerCardSourceHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:text="YouTube account :"
+                                style="@style/InnerCardDetailsTabEditTexts"
+                                android:textStyle="bold"
+                                android:gravity="bottom"
+                                android:paddingBottom="0dp"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            >
+                            <TextView
+                                android:id="@+id/InnerCardSourceAccountHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:text="Joshwin Daniel"
+                                style="@style/InnerCardDetailsTabEditTexts"
+                                android:gravity="center_vertical"
+                                android:fontFamily="sans-serif-light"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:weightSum="4"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            >
+                            <TextView
+                                android:id="@+id/InnerCardDestinationSourceHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:text="Spotify account :"
+                                style="@style/InnerCardDetailsTabEditTexts"
+                                android:textStyle="bold"
+                                android:gravity="bottom"
+                                android:paddingBottom="0dp"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            >
+                            <TextView
+                                android:id="@+id/InnerCardDestinationAccountHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:text="Joshwin Daniel"
+                                style="@style/InnerCardDetailsTabEditTexts"
+                                android:fontFamily="sans-serif-light"
+                                android:gravity="center_vertical"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:weightSum="3"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <ImageView
+                            android:id="@+id/InnerCardShareIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/share_icon"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:background="@drawable/border_top_hat"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/InnerCardDisplayTitleHolder"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:text="Total Items in Playlist"
+                            style="@style/InnerCardDetailsTabEditTexts"
+                            android:gravity="center"
+                            android:textColor="#FF5D05"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        >
+                        <TextView
+                            android:id="@+id/InnerCardDisplayValueHolder"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:text="10"
+                            style="@style/InnerCardDetailsTabEditTexts"
+                            android:gravity="center"
+                            android:textSize="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        >
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            >
+
+                            <ImageView
+                                android:id="@+id/InnerCardDisplayNext"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_baseline_double_arrow_24" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Details block end -->
+
+            <!-- Failed Songs sorter layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:weightSum="10"
+                android:id="@+id/InnerCardFailedItemFilterCheckLayout"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    >
+                    <TextView
+                        android:id="@+id/InnerCardFailedItemTextHolder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/show_failed_items_only"
+                        android:gravity="center_vertical"
+                        android:textAlignment="textEnd"
+                        android:paddingRight="10dp"
+                        android:textSize="16sp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    >
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/InnerCardFailedItemFilter"
+                        android:scaleX="1"
+                        android:scaleY="1"
+                        android:background="@color/black"
+                        android:buttonTint="@color/white"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+        <!-- 2 blocks -->
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

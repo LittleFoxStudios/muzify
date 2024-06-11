@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/innerCardFirstBlock"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        >
+        <RelativeLayout
+            android:id="@+id/innerCardDetailsBlockTopHalfOriginal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tool:visibility="visible"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:id="@+id/innerCardSourceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SOURCE"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/audiowide"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/innerCardAlbumBlock"
+                    android:layout_marginTop="-60dp"
+                    />
+                <ImageView
+                    android:id="@+id/innerCardSourceImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/innerCardSourceTitle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/innerCardAlbumBlock"
+                    tool:src="@drawable/spotify_icon"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/innerCardAlbumBlock"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:padding="3dp"
+                        >
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage1"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            tool:src="@drawable/music_icon_1"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.UpperLeftCorner"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:scaleType="fitXY"
+                            />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage2"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            tool:src="@drawable/music_icon_1"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.UpperRightCorner"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:scaleType="fitXY"
+                            />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage3"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            tool:src="@drawable/music_icon_1"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.BottomLeftCorner"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:scaleType="fitXY"
+                            />
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/innerCardThumbnailImage4"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            tool:src="@drawable/music_icon_1"
+                            app:shapeAppearanceOverlay="@style/RoundedImage.BottomRightCorner"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:scaleType="fitXY"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <View
+                        android:id="@+id/innerCardDisplayBlockShineEffect"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="-20dp"
+                        android:background="@drawable/shine_background"
+                        android:rotation="0" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/innerCardDestinationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DESTINATION"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/audiowide"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/innerCardAlbumBlock"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="-60dp"
+                    />
+                <ImageView
+                    android:id="@+id/innerCardDestinationImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/innerCardDestinationTitle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/innerCardAlbumBlock"
+                    tool:src="@drawable/youtube_music_icon"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <!-- SHIMMER COPY -->
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/innerCardDetailsBlockTopHalfShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            app:shimmer_repeat_mode="restart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:shimmer_shape="radial">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/history_innercard_details_block_shimmer" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <!-- END OF SHIMMER COPY -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@id/innerCardFirstBlock"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyInnerCardDetailsBlockRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context=".homescreenfragments.transfer.datalayout.PlaylistItemsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           >
+           <com.google.android.material.imageview.ShapeableImageView
+               android:id="@+id/transferFragmentPlaylistItemsThumbnail"
+               android:layout_width="70dp"
+               android:layout_height="70dp"
+               app:shapeAppearanceOverlay="@style/RoundedImage"
+               android:padding="10dp"
+               />
+           <TextView
+               android:id="@+id/transferFragmentPlaylistItemsTitle"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               tools:text="Your Likes"
+               android:textSize="25dp"
+               android:textColor="@color/white"
+               android:fontFamily="@font/roboto_thin"
+               android:layout_marginTop="10dp"
+               android:layout_marginLeft="20dp"
+               android:ellipsize="marquee"
+               />
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/transferFragmentPlaylistItemsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <Button
+                    android:id="@+id/transferFragmentPlaylistItemsBackButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/roboto_thin"
+                    android:text="Back"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+                <Button
+                    android:id="@+id/transferFragmentPlaylistItemsContinueButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/green"
+                    android:text="loading..."
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

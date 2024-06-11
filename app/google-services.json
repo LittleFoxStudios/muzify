@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "259639228490",
+    "project_id": "muzify-1674173694198",
+    "storage_bucket": "muzify-1674173694198.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259639228490:android:9ebb31400f348d09758eb3",
+        "android_client_info": {
+          "package_name": "com.littlefoxstudios.muzify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259639228490-m76bjqbrg3stj2rdkn80u54f27rjg9mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwYsgrRcqC9u89Z0HvXIuBXOHDOup0zXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259639228490-m76bjqbrg3stj2rdkn80u54f27rjg9mt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

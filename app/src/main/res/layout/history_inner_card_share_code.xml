@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:textSize="30dp"
+        android:text="Share Code"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/shareCodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textSize="50dp"
+        tools:text="XVJ8AH1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <TextView
+        android:id="@+id/shareCodeWaitText"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_thin"
+        android:textSize="20dp"
+        android:text="Please wait.. Generating share code"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

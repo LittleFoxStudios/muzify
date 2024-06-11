@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playlistFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".homescreenfragments.transfer.datalayout.PlaylistFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+      >
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Choose your playlist"
+          android:textSize="25dp"
+          android:textColor="@color/white"
+          android:fontFamily="@font/roboto_thin"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="20dp"
+          android:layout_marginBottom="10dp"
+          />
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/transferFragmentPlaylistRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+   </LinearLayout>
+
+</FrameLayout>

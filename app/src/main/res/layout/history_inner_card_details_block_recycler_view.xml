@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/icdb1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/icdb1_playlistTitle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            tool:text="Welcome to V2!"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swipe left for more details >>"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_thin"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/icdb2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icdb2_profilePicture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tool:src="@drawable/music_icon_4"
+            android:layout_marginStart="20dp"
+            app:shapeAppearanceOverlay="@style/RoundedImage"
+            android:layout_marginTop="30dp"
+            />
+        <ImageView
+            android:id="@+id/icdb2_musicServiceImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tool:src="@drawable/spotify_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            />
+        <TextView
+            android:id="@+id/icdb2_transferType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            tool:text="SOURCE ACCOUNT"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/audiowide"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:id="@+id/icdb2_accountName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/icdb2_transferType"
+            app:layout_constraintLeft_toRightOf="@id/icdb2_profilePicture"
+            android:layout_marginStart="20dp"
+            tool:text="Daniel"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:layout_marginTop="30dp"
+            />
+        <TextView
+            android:id="@+id/icdb2_accountEmail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/icdb2_accountName"
+            app:layout_constraintLeft_toRightOf="@id/icdb2_profilePicture"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            tool:text="daniel@littlefoxstudios.com"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_thin"
+            android:singleLine="true"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/icdb3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tool:visibility="visible"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/icdb3_failedItems"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/playlist_add_failed_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/icdb3_failedItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/roboto_thin"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tool:text="10"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Total Songs"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/icdb3_totalItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/roboto_thin"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tool:text="130"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/icdb3_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tool:text="100%"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/icdb4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tool:visibility="gone"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icdb4_newBlock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/icdb4_newBlock_generateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/border_thin_grey"
+                >
+                <ImageView
+                    android:id="@+id/icdb4_newBlock_plusSign"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/plus_square_line_icon"
+                    android:layout_marginStart="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/icdb4_newBlock_title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/icdb4_newBlock_plusSign"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:text="Generate Share"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/roboto_thin"
+                    android:textSize="20sp"
+                    android:layout_marginStart="10dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icdb4_generatingBlock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generating Share...."
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_thin"
+                android:textSize="20sp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icdb4_share"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:text="Share Code"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@id/icdb4_share_codeHolder"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <TextView
+                        android:id="@+id/icdb4_share_codeHolder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        tool:text="ZZZZZZZZZ" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/icdb4_share_copyButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/copy_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tool:background="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_thin"
+                        android:text="Total Shares"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@id/icdb4_share_countHolder"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/icdb4_share_countHolder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        tool:text="100"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

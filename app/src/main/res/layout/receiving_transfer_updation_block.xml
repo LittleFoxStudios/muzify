@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:weightSum="10"
+           android:orientation="horizontal"
+           >
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="2"
+               >
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/receiveTransferItemImage"
+                   tools:src="@drawable/aamon"
+                   android:padding="10dp"
+                   />
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="6"
+               android:orientation="vertical"
+               android:weightSum="10"
+               >
+
+               <TextView
+                   android:id="@+id/receiveTransferItemTitle"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="5"
+                   android:textColor="@color/white"
+                   android:fontFamily="@font/roboto"
+                   tools:text="This is Playlist One"
+                   android:textSize="18sp"
+                   android:paddingLeft="10dp"
+                   android:singleLine="true"
+                   android:layout_marginTop="10dp"
+                   />
+
+               <TextView
+                   android:id="@+id/receiveTransferItemInfo"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="5"
+                   android:textColor="@color/green"
+                   android:fontFamily="@font/roboto_thin"
+                   android:paddingLeft="10dp"
+                   tools:text="Creating playlist"
+                   android:textSize="15sp"
+                   android:singleLine="true"
+                   android:layout_marginTop="10dp"
+                   />
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="2"
+               android:orientation="vertical"
+               >
+               <ImageView
+                   android:visibility="gone"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/receiveTransferItemStatusImage"
+                   tools:src="@drawable/waiting_to_load_icon"
+                   android:padding="15dp"
+                   />
+               <ProgressBar
+                   android:visibility="gone"
+                   android:id="@+id/receiveTransferItemProgressBar"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:padding="15dp"
+                   android:indeterminate="true"
+                   android:indeterminateTintMode="src_atop"
+                   android:indeterminateTint="@color/nav_btn_selected"
+                   />
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

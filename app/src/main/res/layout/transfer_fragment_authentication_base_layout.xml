@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/transferServiceImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="-250dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tool:src="@drawable/youtube_music_icon"
+        />
+
+    <TextView
+        android:id="@+id/transferServiceName"
+        app:layout_constraintTop_toBottomOf="@id/transferServiceImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_thin"
+        tool:text="YouTube Music"
+        android:textAlignment="center"
+        />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transferServiceName"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@drawable/border_thin_grey_smooth_rectangle"
+        >
+        <Button
+            android:id="@+id/transferServiceSignInButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="SIGN IN"
+            />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
